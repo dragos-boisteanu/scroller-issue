@@ -6,8 +6,9 @@
           :items="items"
 					key-field="seq"
           :min-item-size="10"
-          class="scroller tw-overflow-auto"
-          style="height: 100%;
+						style="height: 500px;
+						width: 300px;
+						border: 1px solid black;
             overflow-y: auto;
             overflow-x: hidden;
             will-change: transform;
@@ -21,7 +22,7 @@
               :size-dependencies="[item.seq, item.content]"
               :data-index="index"
             >
-              <div>
+              <div style="padding: 5px">
 								<div>
 									<span>{{item.id}}</span> - <span>{{ item.seq}}</span>
 								</div>
