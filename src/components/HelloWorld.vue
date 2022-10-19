@@ -6,8 +6,8 @@
           :items="items"
 					key-field="seq"
           :min-item-size="10"
-						style="height: 500px;
-						width: 300px;
+						style="height: 100%;
+						width: 500px;
 						border: 1px solid black;
             overflow-y: auto;
             overflow-x: hidden;
@@ -19,17 +19,12 @@
             <DynamicScrollerItem
               :item="item"
               :active="active"
-              :size-dependencies="[item.seq, item.content]"
+              :size-dependencies="[item.content]"
               :data-index="index"
             >
-              <div style="padding: 5px">
-								<div>
-									<span>{{item.id}}</span> - <span>{{ item.seq}}</span>
-								</div>
-								<div>
-									{{item.content}}
-								</div>
-							</div>
+              <item
+								:item="item"
+							/>
             </DynamicScrollerItem>
           </template>
         </DynamicScroller>
@@ -39,10 +34,12 @@
 <script>
 import 'vue-virtual-scroller/dist/vue-virtual-scroller.css'
 import { DynamicScroller, DynamicScrollerItem } from "vue-virtual-scroller"
-
+import { faker } from '@faker-js/faker'
+import item from "./item.vue"
 
 export default {
 	components: {
+		item,
 		DynamicScroller,
 		DynamicScrollerItem
 	},
@@ -53,11 +50,13 @@ export default {
 	created() {
 		this.items = [];
 
-		for(let i = 0; i < 1000; i++) {
+		for(let i = 0; i < 10000; i++) {
 			const item = {
 				id: null,
 				seq: i,
-				content: (Math.random() + 1).toString(36).substring(4)
+				name: faker.name.fullName(),
+				content:  faker.lorem.text(),
+				avatar: faker.internet.avatar(),
 			}
 
 			this.items.push(item);
@@ -68,6 +67,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+body,
+html {
+	height: 100vh;
+}
 h3 {
   margin: 40px 0 0;
 }
@@ -84,8 +87,10 @@ a {
 }
 
 .hello {
-	max-height:  500px;
+	height:  500px
 }
+
+
 
 
 </style>

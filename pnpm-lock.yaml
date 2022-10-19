@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@faker-js/faker': ^7.6.0
   '@vue/cli-plugin-babel': ~5.0.0
   '@vue/cli-service': ~5.0.0
   core-js: ^3.8.3
@@ -8,14 +9,15 @@ specifiers:
   sass-loader: ^12.0.0
   vue: ^2.6.14
   vue-template-compiler: ^2.6.14
-  vue-virtual-scroller: ^1.1.1
+  vue-virtual-scroller: ^1.1.2
 
 dependencies:
   core-js: 3.25.5
   vue: 2.7.13
-  vue-virtual-scroller: 1.1.1_vue@2.7.13
+  vue-virtual-scroller: 1.1.2_vue@2.7.13
 
 devDependencies:
+  '@faker-js/faker': 7.6.0
   '@vue/cli-plugin-babel': 5.0.8_54kiau5gtaij3dwj22emdv2aoe
   '@vue/cli-service': 5.0.8_nrgmoz3l422epklnlrhzamuccm
   sass: 1.55.0
@@ -1229,6 +1231,11 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
+
+  /@faker-js/faker/7.6.0:
+    resolution: {integrity: sha512-XK6BTq1NDMo9Xqw/YkYyGjSsg44fbNwYRx7QK2CuoQgyy+f1rrTDHoExVM5PsyXCtfl2vs2vVJ0MN0yN6LppRw==}
+    engines: {node: '>=14.0.0', npm: '>=6.0.0'}
+    dev: true
 
   /@hapi/hoek/9.3.0:
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
@@ -6033,8 +6040,8 @@ packages:
     resolution: {integrity: sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==}
     dev: true
 
-  /vue-virtual-scroller/1.1.1_vue@2.7.13:
-    resolution: {integrity: sha512-UFnIFNThsI0EBOqOtUB1rYIvrPfNajBHuqEPDO4mN5hYA9jWtdl5fz7HuFCsF5XJs1dQ3GbFIF5cXGxT6Zs3ZQ==}
+  /vue-virtual-scroller/1.1.2_vue@2.7.13:
+    resolution: {integrity: sha512-SkUyc7QHCJFB5h1Fya7LxVizlVzOZZuFVipBGHYoTK8dwLs08bIz/tclvRApYhksaJIm/nn51inzO2UjpGJPMQ==}
     peerDependencies:
       vue: ^2.6.11
     dependencies:
