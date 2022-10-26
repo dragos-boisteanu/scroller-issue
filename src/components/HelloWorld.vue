@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+		<textarea style="resize: vertical"/>
 		<DynamicScroller
           id="virtualList"
           ref="dynamicScrollerRef"
@@ -7,12 +8,12 @@
 					key-field="seq"
           :min-item-size="10"
 						style="height: 100%;
-						width: 500px;
+						width: 100;
 						border: 1px solid black;
             overflow-y: auto;
             overflow-x: hidden;
             will-change: transform;
-            padding: 0;
+
           "
         >
           <template #default="{ item, index, active }">
@@ -23,7 +24,8 @@
               :data-index="index"
             >
               <item
-								:item="item"
+								:source="item"
+								@updateContent="updateContent"
 							/>
             </DynamicScrollerItem>
           </template>
@@ -60,6 +62,16 @@ export default {
 			}
 
 			this.items.push(item);
+		}
+	},
+	methods: {
+		updateContent(data) {
+
+			const itemIndex = this.items.findIndex(item => item.seq === data.seq)
+			console.log('updateContent', data)
+			if(itemIndex > -1) {
+				this.$set(this.items[itemIndex], 'content', data.content)
+			}
 		}
 	}
 }

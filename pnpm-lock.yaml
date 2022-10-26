@@ -9,11 +9,13 @@ specifiers:
   sass-loader: ^12.0.0
   vue: ^2.6.14
   vue-template-compiler: ^2.6.14
+  vue-virtual-scroll-list: ^2.3.4
   vue-virtual-scroller: ^1.1.2
 
 dependencies:
   core-js: 3.25.5
   vue: 2.7.13
+  vue-virtual-scroll-list: 2.3.4
   vue-virtual-scroller: 1.1.2_vue@2.7.13
 
 devDependencies:
@@ -6039,6 +6041,10 @@ packages:
   /vue-template-es2015-compiler/1.9.1:
     resolution: {integrity: sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==}
     dev: true
+
+  /vue-virtual-scroll-list/2.3.4:
+    resolution: {integrity: sha512-a9bmmIhAdnKcp8NG0C9ZQ+pW9nAOrDv5SHqJfbbEpXxVVERCtbIgGeBnkwrGgmoILBoFz/WANIZgA22G44F0Yw==}
+    dev: false
 
   /vue-virtual-scroller/1.1.2_vue@2.7.13:
     resolution: {integrity: sha512-SkUyc7QHCJFB5h1Fya7LxVizlVzOZZuFVipBGHYoTK8dwLs08bIz/tclvRApYhksaJIm/nn51inzO2UjpGJPMQ==}
